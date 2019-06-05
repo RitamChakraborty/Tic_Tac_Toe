@@ -1,4 +1,4 @@
-package _Play_Ground.Tic_Tac_Toe.data;
+package _Play_Ground.Tic_Tac_Toe.com.ritam.src.data;
 
 public class Table {
     private static char[][] table;
