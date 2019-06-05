@@ -1,5 +1,8 @@
 package _Play_Ground.Tic_Tac_Toe.com.ritam.src;
 
+import _Play_Ground.Tic_Tac_Toe.com.ritam.src.two_players.TwoPlayers;
+import _Play_Ground.Tic_Tac_Toe.com.ritam.src.vs_com.VsCom;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,11 +14,11 @@ public class Main {
     }
 
     private static void twoPlayers() {
-        System.out.println("Welcome to 'Two Players' game mode");
+        TwoPlayers twoPlayers = new TwoPlayers();
     }
 
     private static void vsCom() {
-        System.out.println("Welcome to 'Vs Computer' game mode");
+        VsCom vsCom = new VsCom();
     }
 
     public static void main(String[] args) {
