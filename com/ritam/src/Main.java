@@ -1,5 +1,6 @@
 package _Play_Ground.Tic_Tac_Toe.com.ritam.src;
 
+import _Play_Ground.Tic_Tac_Toe.com.ritam.src.data.Table;
 import _Play_Ground.Tic_Tac_Toe.com.ritam.src.two_players.TwoPlayers;
 import _Play_Ground.Tic_Tac_Toe.com.ritam.src.vs_com.VsCom;
 
@@ -24,8 +25,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("\t\t***** Tic-Tac-Toe *****");
         System.out.println("(Enter '0' at any input to quit game anytime)");
+
         while (true) {
             int choice;
+            Table.clearTable();
 
             System.out.println("Choose game mode...");
             System.out.println("\t1. 2 Players");
