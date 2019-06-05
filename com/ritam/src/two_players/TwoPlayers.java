@@ -1,8 +1,10 @@
 package _Play_Ground.Tic_Tac_Toe.com.ritam.src.two_players;
 
+import _Play_Ground.Tic_Tac_Toe.Game;
+
 import java.util.Scanner;
 
-public class TwoPlayers {
+public class TwoPlayers extends Game {
     private Scanner scanner;
 
     { scanner = new Scanner(System.in); }
@@ -20,10 +22,12 @@ public class TwoPlayers {
                 case "X":
                 case "x":
                     System.out.println("Player 2 will play with 'O'");
+                    startGame('X', 'O');
                     break;
                 case "O":
                 case "o":
                     System.out.println("Player 2 will play with X");
+                    startGame('O', 'X');
                     break;
                 case "0":
                     System.exit(2);
@@ -31,5 +35,10 @@ public class TwoPlayers {
                     System.out.println("UNKNOWN INPUT!");
             }
         }
+    }
+
+    @Override
+    public void startGame(char w1, char w2) {
+
     }
 }
