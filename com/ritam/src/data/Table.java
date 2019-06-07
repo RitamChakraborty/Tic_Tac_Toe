@@ -7,6 +7,10 @@ public class Table {
         table = new char[3][3];
     }
 
+    public static boolean emptyPosition(int r, int c) {
+        return table[r][c] == ' ';
+    }
+
     public static void clearTable() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
