@@ -7,6 +7,22 @@ public class Table {
         table = new char[3][3];
     }
 
+    public static boolean isEmpty() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (table[i][j] != ' ') {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean positionAllocatedBy(int r, int c, char w) {
+        return table[r][c] == w;
+    }
+
     public static boolean emptyPosition(int r, int c) {
         return table[r][c] == ' ';
     }

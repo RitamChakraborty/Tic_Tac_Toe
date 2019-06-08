@@ -2,6 +2,7 @@ package _Play_Ground.Tic_Tac_Toe.com.ritam.src.vs_com;
 
 import _Play_Ground.Tic_Tac_Toe.com.ritam.src.Game;
 import _Play_Ground.Tic_Tac_Toe.com.ritam.src.data.Table;
+import _Play_Ground.Tic_Tac_Toe.com.ritam.src.logic.Logic;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -136,7 +137,7 @@ public class VsCom extends Game {
                         r = scanner.nextInt();
                         c = scanner.nextInt();
 
-                        validInput = Table.setWarrior(r - 1 , c - 1, w1);       // w1: Player
+                        validInput = Table.setWarrior(r - 1, c - 1, w1);       // w1: Player
                     }
 
                     Table.printTable();
@@ -170,7 +171,7 @@ public class VsCom extends Game {
                         r = scanner.nextInt();
                         c = scanner.nextInt();
 
-                        validInput = Table.setWarrior(r - 1 , c - 1, w1);       // w1: Player
+                        validInput = Table.setWarrior(r - 1, c - 1, w1);       // w1: Player
                     }
 
                     Table.printTable();
@@ -208,7 +209,70 @@ public class VsCom extends Game {
     }
 
     private void medium(char w1, char w2) {
-        System.out.println("Welcome to medium mode");
+        if (comFirst) {     // Computer will take the first turn
+            int i = 0;
+            int r = 0;
+            int c = 0;
+
+            while (true) {
+                if (i % 2 == 0) {
+                    System.out.println("Computer...");
+
+                    if (Table.isEmpty()) {
+                        int[] pos = setWarrior();
+                        Table.setWarrior(pos[0], pos[1], w2);       // w2: computer
+                    } else {
+                        boolean defaultCase = Logic.winningLogic(w2);
+
+                        // Else
+                        if (defaultCase) {
+                            System.out.println("Else");
+                            int[] pos = setWarrior();
+                            Table.setWarrior(pos[0], pos[1], w2);
+                        }
+                    }
+
+                    Table.printTable();
+
+                    if (Table.foundWinner(w2)) {
+                        gameOver("Computer");
+                        break;
+                    }
+
+                    if (!Table.gameIsAlive()) {
+                        System.out.println("Match is tied\n");
+                        break;
+                    }
+                } else {
+                    boolean validInput = false;
+                    System.out.println("Player...");
+
+                    while (!validInput) {
+                        System.out.println("Enter position: ");
+                        r = scanner.nextInt();
+                        c = scanner.nextInt();
+
+                        validInput = Table.setWarrior(r - 1, c - 1, w1);       // w1: Player
+                    }
+
+                    Table.printTable();
+
+                    if (Table.foundWinner(w1)) {
+                        gameOver("Player");
+                        break;
+                    }
+
+                    if (!Table.gameIsAlive()) {
+                        System.out.println("Match is tied\n");
+                        break;
+                    }
+                }
+
+                i++;
+            }
+        } else {        // Player will take the first turn
+
+        }
     }
 
     private void hard(char w1, char w2) {
