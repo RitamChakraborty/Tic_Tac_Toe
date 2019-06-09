@@ -271,7 +271,60 @@ public class VsCom extends Game {
                 i++;
             }
         } else {        // Player will take the first turn
+            int i = 0;
+            int r = 0;
+            int c = 0;
 
+            while (true) {
+                if (i % 2 == 0) {
+                    boolean validInput = false;
+                    System.out.println("Player...");
+
+                    while (!validInput) {
+                        System.out.println("Enter position: ");
+                        r = scanner.nextInt();
+                        c = scanner.nextInt();
+
+                        validInput = Table.setWarrior(r - 1, c - 1, w1);       // w1: Player
+                    }
+
+                    Table.printTable();
+
+                    if (Table.foundWinner(w1)) {
+                        gameOver("Player");
+                        break;
+                    }
+
+                    if (!Table.gameIsAlive()) {
+                        System.out.println("Match is tied\n");
+                        break;
+                    }
+                } else {
+                    System.out.println("Computer...");
+
+                    boolean defaultCase = Logic.winningLogic(w2);
+
+                    if (defaultCase) {
+                        System.out.println("Else");
+                        int[] pos = setWarrior();
+                        Table.setWarrior(pos[0], pos[1], w2);
+                    }
+
+                    Table.printTable();
+
+                    if (Table.foundWinner(w2)) {
+                        gameOver("Computer");
+                        break;
+                    }
+
+                    if (!Table.gameIsAlive()) {
+                        System.out.println("Match is tied\n");
+                        break;
+                    }
+                }
+
+                i++;
+            }
         }
     }
 
