@@ -105,52 +105,58 @@ public class VsCom extends Game {
         }
     }
 
+    private void takeUserInput(char w) {
+        int r = 0;
+        int c = 0;
+        boolean validInput = false;
+
+        while (!validInput) {
+            System.out.println("Enter position: ");
+            r = scanner.nextInt();
+            c = scanner.nextInt();
+
+            validInput = Table.setWarrior(r - 1, c - 1, w);       // w1: Player
+        }
+    }
+
+    private void takeComputerInput(char w) {
+        int[] pos = setWarrior();
+        Table.setWarrior(pos[0], pos[1], w);
+    }
+
+    private boolean carryOnGame(char w, String winner) {
+        Table.printTable();
+
+        if (Table.foundWinner(w)) {
+            gameOver(winner);
+            return false;
+        }
+
+        if (!Table.gameIsAlive()) {
+            System.out.println("Match is tied\n");
+            System.out.println("-----------------------------------------------------------------------------------\n");
+            return false;
+        }
+
+        return true;
+    }
+
     private void easy(char w1, char w2) {
         if (comFirst) {     // Computer will take the first turn
             int i = 0;
-            int r = 0;
-            int c = 0;
+            boolean continueGame = true;
 
-            while (true) {
+            while (continueGame) {
                 if (i % 2 == 0) {
                     System.out.println("Computer...");
 
-                    int[] pos = setWarrior();
-                    Table.setWarrior(pos[0], pos[1], w2);       // w2: computer
-                    Table.printTable();
-
-                    if (Table.foundWinner(w2)) {
-                        gameOver("Computer");
-                        break;
-                    }
-
-                    if (!Table.gameIsAlive()) {
-                        System.out.println("Match is tied\n");
-                        break;
-                    }
+                    takeComputerInput(w2);
+                    continueGame = carryOnGame(w2, "Computer");
                 } else {
-                    boolean validInput = false;
                     System.out.println("Player...");
 
-                    while (!validInput) {
-                        System.out.println("Enter position: ");
-                        r = scanner.nextInt();
-                        c = scanner.nextInt();
-
-                        validInput = Table.setWarrior(r - 1, c - 1, w1);       // w1: Player
-                    }
-
-                    Table.printTable();
-
-                    if (Table.foundWinner(w1)) {
-                        gameOver("Player");
-                        break;
-                    }
-
-                    if (!Table.gameIsAlive()) {
-                        System.out.println("Match is tied\n");
-                        break;
-                    }
+                    takeUserInput(w1);
+                    continueGame = carryOnGame(w1, "Player");
                 }
 
                 i++;
@@ -158,49 +164,19 @@ public class VsCom extends Game {
 
         } else {        // Player will take the first turn
             int i = 0;
-            int r = 0;
-            int c = 0;
+            boolean continueGame = true;
 
-            while (true) {
+            while (continueGame) {
                 if (i % 2 == 0) {
-                    boolean validInput = false;
                     System.out.println("Player...");
 
-                    while (!validInput) {
-                        System.out.println("Enter position: ");
-                        r = scanner.nextInt();
-                        c = scanner.nextInt();
-
-                        validInput = Table.setWarrior(r - 1, c - 1, w1);       // w1: Player
-                    }
-
-                    Table.printTable();
-
-                    if (Table.foundWinner(w1)) {
-                        gameOver("Player");
-                        break;
-                    }
-
-                    if (!Table.gameIsAlive()) {
-                        System.out.println("Match is tied\n");
-                        break;
-                    }
+                    takeUserInput(w1);
+                    continueGame = carryOnGame(w1, "Player");
                 } else {
                     System.out.println("Computer...");
 
-                    int[] pos = setWarrior();
-                    Table.setWarrior(pos[0], pos[1], w2);       // w2: computer
-                    Table.printTable();
-
-                    if (Table.foundWinner(w2)) {
-                        gameOver("Computer");
-                        break;
-                    }
-
-                    if (!Table.gameIsAlive()) {
-                        System.out.println("Match is tied\n");
-                        break;
-                    }
+                    takeComputerInput(w2);
+                    continueGame = carryOnGame(w2, "Computer");
                 }
 
                 i++;
@@ -211,116 +187,52 @@ public class VsCom extends Game {
     private void medium(char w1, char w2) {
         if (comFirst) {     // Computer will take the first turn
             int i = 0;
-            int r = 0;
-            int c = 0;
+            boolean continueGame = true;
 
-            while (true) {
+            while (continueGame) {
                 if (i % 2 == 0) {
                     System.out.println("Computer...");
 
                     if (Table.isEmpty()) {
-                        int[] pos = setWarrior();
-                        Table.setWarrior(pos[0], pos[1], w2);       // w2: computer
+                        takeComputerInput(w2);
                     } else {
                         boolean defaultCase = Logic.winningLogic(w2);
 
-                        // Else
                         if (defaultCase) {
-                            System.out.println("Else");
-                            int[] pos = setWarrior();
-                            Table.setWarrior(pos[0], pos[1], w2);
+                            takeComputerInput(w2);
                         }
                     }
 
-                    Table.printTable();
-
-                    if (Table.foundWinner(w2)) {
-                        gameOver("Computer");
-                        break;
-                    }
-
-                    if (!Table.gameIsAlive()) {
-                        System.out.println("Match is tied\n");
-                        break;
-                    }
+                    continueGame = carryOnGame(w2, "Computer");
                 } else {
-                    boolean validInput = false;
                     System.out.println("Player...");
 
-                    while (!validInput) {
-                        System.out.println("Enter position: ");
-                        r = scanner.nextInt();
-                        c = scanner.nextInt();
-
-                        validInput = Table.setWarrior(r - 1, c - 1, w1);       // w1: Player
-                    }
-
-                    Table.printTable();
-
-                    if (Table.foundWinner(w1)) {
-                        gameOver("Player");
-                        break;
-                    }
-
-                    if (!Table.gameIsAlive()) {
-                        System.out.println("Match is tied\n");
-                        break;
-                    }
+                    takeUserInput(w1);
+                    continueGame = carryOnGame(w1, "Player");
                 }
 
                 i++;
             }
         } else {        // Player will take the first turn
             int i = 0;
-            int r = 0;
-            int c = 0;
+            boolean continueGame = true;
 
-            while (true) {
+            while (continueGame) {
                 if (i % 2 == 0) {
-                    boolean validInput = false;
                     System.out.println("Player...");
 
-                    while (!validInput) {
-                        System.out.println("Enter position: ");
-                        r = scanner.nextInt();
-                        c = scanner.nextInt();
-
-                        validInput = Table.setWarrior(r - 1, c - 1, w1);       // w1: Player
-                    }
-
-                    Table.printTable();
-
-                    if (Table.foundWinner(w1)) {
-                        gameOver("Player");
-                        break;
-                    }
-
-                    if (!Table.gameIsAlive()) {
-                        System.out.println("Match is tied\n");
-                        break;
-                    }
+                    takeUserInput(w1);
+                    continueGame = carryOnGame(w1, "Player");
                 } else {
                     System.out.println("Computer...");
 
                     boolean defaultCase = Logic.winningLogic(w2);
 
                     if (defaultCase) {
-                        System.out.println("Else");
-                        int[] pos = setWarrior();
-                        Table.setWarrior(pos[0], pos[1], w2);
+                        takeComputerInput(w2);
                     }
 
-                    Table.printTable();
-
-                    if (Table.foundWinner(w2)) {
-                        gameOver("Computer");
-                        break;
-                    }
-
-                    if (!Table.gameIsAlive()) {
-                        System.out.println("Match is tied\n");
-                        break;
-                    }
+                    continueGame = carryOnGame(w2, "Computer");
                 }
 
                 i++;
@@ -333,6 +245,8 @@ public class VsCom extends Game {
     }
 
     private void gameOver(String s) {
-        System.out.println(s + " has own the match!");
+        System.out.println(s + " has own the match!\n");
+        System.out.println("-----------------------------------------------------------------------------------\n");
+
     }
 }
