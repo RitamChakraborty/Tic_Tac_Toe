@@ -241,7 +241,75 @@ public class VsCom extends Game {
     }
 
     private void hard(char w1, char w2) {
-        System.out.println("Welcome to hard mode");
+        if (comFirst) {     // Computer will take the first turn
+            int i = 0;
+            boolean continueGame = true;
+
+            while (continueGame) {
+                if (i % 2 == 0) {
+                    System.out.println("Computer...");
+
+                    if (Table.isEmpty()) {
+                        takeComputerInput(w2);
+                    } else {
+                        boolean defaultCase = Logic.winningLogic(w2);
+
+                        if (defaultCase) {
+                            defaultCase = Logic.survivalLogic(w2);
+                        }
+
+                        if (defaultCase) {
+                            takeComputerInput(w2);
+                        }
+                    }
+
+                    continueGame = carryOnGame(w2, "Computer");
+                } else {
+                    System.out.println("Player...");
+
+                    takeUserInput(w1);
+                    continueGame = carryOnGame(w1, "Player");
+                }
+
+                i++;
+            }
+        } else {        // Player will take the first turn
+            int i = 0;
+            boolean continueGame = true;
+
+            while (continueGame) {
+                if (i % 2 == 0) {
+                    System.out.println("Player...");
+
+                    takeUserInput(w1);
+                    continueGame = carryOnGame(w1, "Player");
+                } else {
+                    System.out.println("Computer...");
+
+                    if (i == 1) {
+                        if (Table.emptyPosition(1, 1)) {
+                            Table.setWarrior(1, 1, w2);
+                        } else {
+                            takeComputerInput(w2);
+                        }
+                    } else {
+                        boolean defaultCase = Logic.winningLogic(w2);
+
+                        if (defaultCase) {
+                            defaultCase = Logic.survivalLogic(w2);
+                        }
+
+                        if (defaultCase) {
+                            takeComputerInput(w2);
+                        }
+                    }
+
+                    continueGame = carryOnGame(w2, "Computer");
+                }
+
+                i++;
+            }
+        }
     }
 
     private void gameOver(String s) {
