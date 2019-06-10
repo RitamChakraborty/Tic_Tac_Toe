@@ -1,4 +1,4 @@
-package _Play_Ground.Tic_Tac_Toe.com.ritam.src.data;
+package com.ritam.src.data;
 
 public class Table {
     private static char[][] table;
@@ -65,15 +65,15 @@ public class Table {
     }
 
     public static boolean gameIsAlive() {
-       for (int i = 0; i < 3; i++) {
-           for (int j = 0; j < 3; j++) {
-               if (table[i][j] == ' ') {
-                   return true;
-               }
-           }
-       }
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (table[i][j] == ' ') {
+                    return true;
+                }
+            }
+        }
 
-       return false;
+        return false;
     }
 
     private static boolean checkRow(int i, char w) {

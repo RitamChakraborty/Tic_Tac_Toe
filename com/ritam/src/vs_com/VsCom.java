@@ -1,8 +1,8 @@
-package _Play_Ground.Tic_Tac_Toe.com.ritam.src.vs_com;
+package com.ritam.src.vs_com;
 
-import _Play_Ground.Tic_Tac_Toe.com.ritam.src.Game;
-import _Play_Ground.Tic_Tac_Toe.com.ritam.src.data.Table;
-import _Play_Ground.Tic_Tac_Toe.com.ritam.src.logic.Logic;
+import com.ritam.src.Game;
+import com.ritam.src.data.Table;
+import com.ritam.src.logic.Logic;
 
 import java.util.Random;
 import java.util.Scanner;

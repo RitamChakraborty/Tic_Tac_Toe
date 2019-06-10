@@ -1,14 +1,16 @@
-package _Play_Ground.Tic_Tac_Toe.com.ritam.src.two_players;
+package com.ritam.src.two_players;
 
-import _Play_Ground.Tic_Tac_Toe.com.ritam.src.Game;
-import _Play_Ground.Tic_Tac_Toe.com.ritam.src.data.Table;
+import com.ritam.src.Game;
+import com.ritam.src.data.Table;
 
 import java.util.Scanner;
 
 public class TwoPlayers extends Game {
     private Scanner scanner;
 
-    { scanner = new Scanner(System.in); }
+    {
+        scanner = new Scanner(System.in);
+    }
 
     public TwoPlayers() {
         System.out.println("Welcome to 2 players game mode");
@@ -82,7 +84,7 @@ public class TwoPlayers extends Game {
                     r = scanner.nextInt();
                     c = scanner.nextInt();
 
-                    validInput = Table.setWarrior(r - 1 , c - 1, w2);
+                    validInput = Table.setWarrior(r - 1, c - 1, w2);
                 }
 
                 Table.printTable();
