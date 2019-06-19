@@ -20,37 +20,48 @@ public class VsCom extends Game {
         System.out.println("Welcome to Vs Computer game mode");
         Table.clearTable();
 
+        boolean validInput = false;
         String choice;
-        System.out.println("Choose who will take the first turn...");
-        System.out.println("\t1. Player");
-        System.out.println("\t2. Computer");
-        System.out.println("Enter you choice: ");
-        choice = scanner.next();
 
-        if (choice.equals("2")) {
-            comFirst = true;
-        } else if (!choice.equals("1")) {
-            System.out.println("UNKNOWN INPUT!");
+        while (!validInput) {
+            System.out.println("Choose who will take the first turn...");
+            System.out.println("\t1. Player");
+            System.out.println("\t2. Computer");
+            System.out.println("Enter you choice: ");
+            choice = scanner.next();
+
+            if (choice.equals("2")) {
+                validInput = true;
+                comFirst = true;
+            } else if (!choice.equals("1")) {
+                System.out.println("UNKNOWN INPUT!");
+            }
         }
 
-        System.out.println("Choose your warrior (O/X): ");
-        choice = scanner.next();
+        validInput = false;
 
-        switch (choice) {
-            case "X":
-            case "x":
-                System.out.println("Computer will play with 'O'");
-                startGame('X', 'O');
-                break;
-            case "O":
-            case "o":
-                System.out.println("Computer will play with 'X'");
-                startGame('O', 'X');
-                break;
-            case "0":
-                System.exit(3);
-            default:
-                System.out.println("UNKNOWN INPUT!");
+        while (!validInput) {
+            System.out.println("Choose your warrior (O/X): ");
+            choice = scanner.next();
+
+            switch (choice) {
+                case "X":
+                case "x":
+                    validInput = true;
+                    System.out.println("Computer will play with 'O'");
+                    startGame('X', 'O');
+                    break;
+                case "O":
+                case "o":
+                    validInput = true;
+                    System.out.println("Computer will play with 'X'");
+                    startGame('O', 'X');
+                    break;
+                case "0":
+                    System.exit(3);
+                default:
+                    System.out.println("UNKNOWN INPUT!");
+            }
         }
     }
 
@@ -65,27 +76,36 @@ public class VsCom extends Game {
                 "\n\tfor you want to place your warrior\n");
 
         int choice;
+        boolean validInput = false;
 
         System.out.println("This mode have 3 levels...");
-        System.out.println("\t1. Easy");
-        System.out.println("\t2. Medium");
-        System.out.println("\t3. Hard");
-        System.out.println("Enter your choice: ");
-        choice = scanner.nextInt();
 
-        switch (choice) {
-            case 1:
-                easy(w1, w2);
-                break;
-            case 2:
-                medium(w1, w2);
-                break;
-            case 3:
-                hard(w1, w2);
-                break;
-            default:
-                System.out.println("UNKNOWN INPUT!");
+        while (!validInput) {
+            System.out.println("\t1. Easy");
+            System.out.println("\t2. Medium");
+            System.out.println("\t3. Hard");
+            System.out.println("Enter your choice: ");
+            choice = scanner.nextInt();
 
+            switch (choice) {
+                case 1:
+                    validInput = true;
+                    easy(w1, w2);
+                    break;
+                case 2:
+                    validInput = true;
+                    medium(w1, w2);
+                    break;
+                case 3:
+                    validInput = true;
+                    hard(w1, w2);
+                    break;
+                case 0:
+                    System.exit(1);
+                default:
+                    System.out.println("UNKNOWN INPUT!");
+
+            }
         }
     }
 
@@ -106,8 +126,8 @@ public class VsCom extends Game {
     }
 
     private void takeUserInput(char w) {
-        int r = 0;
-        int c = 0;
+        int r;
+        int c;
         boolean validInput = false;
 
         while (!validInput) {
@@ -161,7 +181,6 @@ public class VsCom extends Game {
 
                 i++;
             }
-
         } else {        // Player will take the first turn
             int i = 0;
             boolean continueGame = true;
