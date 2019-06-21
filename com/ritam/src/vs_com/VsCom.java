@@ -85,26 +85,34 @@ public class VsCom extends Game {
             System.out.println("\t2. Medium");
             System.out.println("\t3. Hard");
             System.out.println("Enter your choice: ");
-            choice = scanner.nextInt();
+            String input = scanner.next();
 
-            switch (choice) {
-                case 1:
-                    validInput = true;
-                    easy(w1, w2);
-                    break;
-                case 2:
-                    validInput = true;
-                    medium(w1, w2);
-                    break;
-                case 3:
-                    validInput = true;
-                    hard(w1, w2);
-                    break;
-                case 0:
-                    System.exit(1);
-                default:
-                    System.out.println("UNKNOWN INPUT!");
+            if (input.equals("1") || input.equals("2") || input.equals("3")) {
+                choice = Integer.parseInt(input);
 
+                switch (choice) {
+                    case 1:
+                        validInput = true;
+                        easy(w1, w2);
+                        break;
+                    case 2:
+                        validInput = true;
+                        medium(w1, w2);
+                        break;
+                    case 3:
+                        validInput = true;
+                        hard(w1, w2);
+                        break;
+                    case 0:
+                        System.exit(1);
+                    default:
+                        System.out.println("UNKNOWN INPUT!");
+
+                }
+
+                validInput = true;
+            } else {
+                System.out.println("UNKNOWN INPUT!");
             }
         }
     }
@@ -126,16 +134,22 @@ public class VsCom extends Game {
     }
 
     private void takeUserInput(char w) {
-        int r;
-        int c;
         boolean validInput = false;
 
         while (!validInput) {
             System.out.println("Enter position: ");
-            r = scanner.nextInt();
-            c = scanner.nextInt();
+            String rowInput = scanner.next();
+            String colInput = scanner.next();
 
-            validInput = Table.setWarrior(r - 1, c - 1, w);       // w1: Player
+            if ((rowInput.equals("1") || rowInput.equals("2") || rowInput.equals("3"))
+                    && (colInput.equals("1") || colInput.equals("2") || colInput.equals("3"))) {
+                int r = Integer.parseInt(rowInput);
+                int c = Integer.parseInt(colInput);
+
+                validInput = Table.setWarrior(r - 1, c - 1, w);
+            } else {
+                System.out.println("UNKNOWN INPUT!");
+            }
         }
     }
 

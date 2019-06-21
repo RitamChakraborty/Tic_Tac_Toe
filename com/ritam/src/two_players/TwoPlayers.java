@@ -37,6 +37,26 @@ public class TwoPlayers extends Game {
         }
     }
 
+    private void takeInput(char w) {
+        boolean validInput = false;
+
+        while (!validInput) {
+            System.out.println("Enter position: ");
+            String rowInput = scanner.next();
+            String colInput = scanner.next();
+
+            if ((rowInput.equals("1") || rowInput.equals("2") || rowInput.equals("3"))
+                    && (colInput.equals("1") || colInput.equals("2") || colInput.equals("3"))) {
+                int r = Integer.parseInt(rowInput);
+                int c = Integer.parseInt(colInput);
+                validInput = Table.setWarrior(r - 1, c - 1, w);
+            } else {
+                System.out.println("UNKNOWN INPUT!");
+            }
+
+        }
+    }
+
     @Override
     public void startGame(char w1, char w2) {
         System.out.println("\nLet's start the game...\n");
@@ -56,13 +76,7 @@ public class TwoPlayers extends Game {
                 boolean validInput = false;
                 System.out.println("Player 1...");
 
-                while (!validInput) {
-                    System.out.println("Enter position: ");
-                    r = scanner.nextInt();
-                    c = scanner.nextInt();
-
-                    validInput = Table.setWarrior(r - 1, c - 1, w1);
-                }
+                takeInput(w1);
 
                 Table.printTable();
 
@@ -79,13 +93,7 @@ public class TwoPlayers extends Game {
                 boolean validInput = false;
                 System.out.println("Player 2...");
 
-                while (!validInput) {
-                    System.out.println("Enter position: ");
-                    r = scanner.nextInt();
-                    c = scanner.nextInt();
-
-                    validInput = Table.setWarrior(r - 1, c - 1, w2);
-                }
+                takeInput(w2);
 
                 Table.printTable();
 

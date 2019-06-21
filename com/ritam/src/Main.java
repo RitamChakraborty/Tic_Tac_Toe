@@ -27,14 +27,25 @@ public class Main {
         System.out.println("(Enter '0' at any input to quit game anytime)");
 
         while (true) {
-            int choice;
             Table.clearTable();
 
-            System.out.println("Choose game mode...");
-            System.out.println("\t1. 2 Players");
-            System.out.println("\t2. Vs Computer");
-            System.out.println("Enter your choice");
-            choice = scanner.nextInt();
+            int choice = 0;
+            boolean rightInput = false;
+
+            while (!rightInput) {
+                System.out.println("Choose game mode...");
+                System.out.println("\t1. 2 Players");
+                System.out.println("\t2. Vs Computer");
+                System.out.println("Enter your choice: ");
+                String input = scanner.next();
+
+                if (input.equals("1") || input.equals("2")) {
+                    choice = Integer.parseInt(input);
+                    rightInput = true;
+                } else {
+                    System.out.println("UNKNOWN INPUT!");
+                }
+            }
 
             switch (choice) {
                 case 1:
