@@ -92,15 +92,12 @@ public class VsCom extends Game {
 
                 switch (choice) {
                     case 1:
-                        validInput = true;
                         easy(w1, w2);
                         break;
                     case 2:
-                        validInput = true;
                         medium(w1, w2);
                         break;
                     case 3:
-                        validInput = true;
                         hard(w1, w2);
                         break;
                     case 0:
