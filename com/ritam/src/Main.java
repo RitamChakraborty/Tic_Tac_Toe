@@ -39,7 +39,7 @@ public class Main {
                 System.out.println("Enter your choice: ");
                 String input = scanner.next();
 
-                if (input.equals("1") || input.equals("2")) {
+                if (input.equals("1") || input.equals("2") || input.equals("0")) {
                     choice = Integer.parseInt(input);
                     rightInput = true;
                 } else {

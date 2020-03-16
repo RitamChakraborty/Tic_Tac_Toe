@@ -78,7 +78,7 @@ public class VsCom extends Game {
         int choice;
         boolean validInput = false;
 
-        System.out.println("This mode have 3 levels...");
+        System.out.println("Choose a level...");
 
         while (!validInput) {
             System.out.println("\t1. Easy");
