@@ -141,3 +141,8 @@ Made in **java**, run on _CLI_
 Try if you can beat the computer!
 
 ## How to play
+- Make sure _Java 8 or higher_ in installed in your system.
+- Download the _.jar_ file from [here](https://github.com/RitamChakraborty/Tic_Tac_Toe/releases/download/v1.0/Tic_Tac_Toe.jar).
+- Run
+
+        java -jar Tic_Tac_Toe.jar
