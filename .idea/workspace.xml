@@ -6,23 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdafe239-af23-42d2-b120-9a8fde093a1e" name="Default Changelist" comment="Update README.md">
+    <list default="true" id="bdafe239-af23-42d2-b120-9a8fde093a1e" name="Default Changelist" comment="Fix invalid input problem when play takes first turn in vscom mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/ritam/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/ritam/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/ritam/src/data/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/ritam/src/logic/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Logic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/ritam/src/two_players/TwoPlayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/two_players/TwoPlayers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/ritam/src/vs_com/VsCom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vs_com/VsCom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/data/Table.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/logic/Logic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/two_players/TwoPlayers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/vs_com/VsCom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/Tic_Tac_Toe.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +35,6 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="653" />
-    <option name="height" value="572" />
   </component>
   <component name="ProjectId" id="1ZCVDx6Ft2BnQeZAloSrWoluyFA" />
   <component name="ProjectViewState">
@@ -118,7 +106,7 @@
       <workItem from="1584342948799" duration="1377000" />
       <workItem from="1584461037652" duration="608000" />
       <workItem from="1584597862511" duration="2616000" />
-      <workItem from="1585497985344" duration="531000" />
+      <workItem from="1585497985344" duration="932000" />
     </task>
     <task id="LOCAL-00001" summary="Added handler for wrong inputs">
       <created>1560966773728</created>
@@ -162,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584344276640</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix invalid input problem when play takes first turn in vscom mode">
+      <created>1585498625117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585498625117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +186,8 @@
     <MESSAGE value="Fix exit the game while choosing mode and change some in game description" />
     <MESSAGE value="Remove unnecessary variable" />
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="Fix invalid input problem when play takes first turn in vscom mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix invalid input problem when play takes first turn in vscom mode" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -201,10 +197,10 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="420" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.732@0.0.1366.732" timestamp="1584343683270" />
-    <state x="212" y="0" key="CommitChangelistDialog2" timestamp="1585498586935">
+    <state x="212" y="0" key="CommitChangelistDialog2" timestamp="1585498747855">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="212" y="0" key="CommitChangelistDialog2/0.0.1366.732@0.0.1366.732" timestamp="1585498586935" />
+    <state x="212" y="0" key="CommitChangelistDialog2/0.0.1366.732@0.0.1366.732" timestamp="1585498747855" />
     <state x="470" y="118" key="FileChooserDialogImpl" timestamp="1584600986776">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
@@ -229,10 +225,10 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="170" y="0" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1584343947133" />
-    <state x="282" y="96" key="Vcs.Push.Dialog.v2" timestamp="1584344278580">
+    <state x="282" y="96" key="Vcs.Push.Dialog.v2" timestamp="1585498626955">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="282" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.732@0.0.1366.732" timestamp="1584344278580" />
+    <state x="282" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.732@0.0.1366.732" timestamp="1585498626955" />
     <state x="362" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584597936893">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
