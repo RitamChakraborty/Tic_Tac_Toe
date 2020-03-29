@@ -1,6 +1,6 @@
 # Tic-Tac-Toe Game
 
-Made in **java**, run on _CLI_
+A command line Tic-Tac-Toe game
 
 ## Features
 
