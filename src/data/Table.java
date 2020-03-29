@@ -1,4 +1,4 @@
-package com.ritam.src.data;
+package src.data;
 
 public class Table {
     private static char[][] table;

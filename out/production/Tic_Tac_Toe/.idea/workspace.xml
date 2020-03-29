@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Tic_Tac_Toe:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bdafe239-af23-42d2-b120-9a8fde093a1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Tic_Tac_Toe_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -36,7 +44,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Design Pattern" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -92,7 +100,9 @@
       <workItem from="1561128521602" duration="16000" />
       <workItem from="1561136908308" duration="2707000" />
       <workItem from="1561183878671" duration="18000" />
-      <workItem from="1584342948799" duration="992000" />
+      <workItem from="1584342948799" duration="1377000" />
+      <workItem from="1584461037652" duration="608000" />
+      <workItem from="1584597862511" duration="2616000" />
     </task>
     <task id="LOCAL-00001" summary="Added handler for wrong inputs">
       <created>1560966773728</created>
@@ -122,7 +132,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584343655042</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update README.md">
+      <created>1584343998615</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584343998615</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update README.md">
+      <created>1584344276640</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584344276640</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +160,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -148,7 +174,8 @@
     <MESSAGE value="Added handler for InputMismatchException" />
     <MESSAGE value="Fix exit the game while choosing mode and change some in game description" />
     <MESSAGE value="Remove unnecessary variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary variable" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -158,37 +185,49 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="420" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.732@0.0.1366.732" timestamp="1584343683270" />
-    <state x="212" y="0" key="CommitChangelistDialog2" timestamp="1584343653008">
+    <state x="212" y="0" key="CommitChangelistDialog2" timestamp="1584344274594">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="212" y="0" key="CommitChangelistDialog2/0.0.1366.732@0.0.1366.732" timestamp="1584343653008" />
-    <state width="1324" height="451" key="GridCell.Tab.0.bottom" timestamp="1584343484678">
+    <state x="212" y="0" key="CommitChangelistDialog2/0.0.1366.732@0.0.1366.732" timestamp="1584344274594" />
+    <state x="470" y="118" key="FileChooserDialogImpl" timestamp="1584600986776">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1324" height="451" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1584343484678" />
-    <state width="1324" height="451" key="GridCell.Tab.0.center" timestamp="1584343484677">
+    <state x="470" y="118" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1584600986776" />
+    <state width="1324" height="451" key="GridCell.Tab.0.bottom" timestamp="1584344336654">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1324" height="451" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1584343484677" />
-    <state width="1324" height="451" key="GridCell.Tab.0.left" timestamp="1584343484677">
+    <state width="1324" height="451" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1584344336654" />
+    <state width="1324" height="451" key="GridCell.Tab.0.center" timestamp="1584344336653">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1324" height="451" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1584343484677" />
-    <state width="1324" height="451" key="GridCell.Tab.0.right" timestamp="1584343484678">
+    <state width="1324" height="451" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1584344336653" />
+    <state width="1324" height="451" key="GridCell.Tab.0.left" timestamp="1584344336653">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1324" height="451" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1584343484678" />
+    <state width="1324" height="451" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1584344336653" />
+    <state width="1324" height="451" key="GridCell.Tab.0.right" timestamp="1584344336654">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1324" height="451" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1584344336654" />
     <state x="170" y="0" key="SettingsEditor" timestamp="1584343947133">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="170" y="0" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1584343947133" />
+    <state x="282" y="96" key="Vcs.Push.Dialog.v2" timestamp="1584344278580">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="282" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.732@0.0.1366.732" timestamp="1584344278580" />
+    <state x="362" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584597936893">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="362" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.732@0.0.1366.732" timestamp="1584597936893" />
     <state x="381" y="154" key="git4idea.merge.GitMergeDialog" timestamp="1584343747836">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="381" y="154" key="git4idea.merge.GitMergeDialog/0.0.1366.732@0.0.1366.732" timestamp="1584343747836" />
-    <state x="392" y="212" key="git4idea.ui.GitTagDialog" timestamp="1584343771364">
+    <state x="392" y="212" key="git4idea.ui.GitTagDialog" timestamp="1584344013476">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="392" y="212" key="git4idea.ui.GitTagDialog/0.0.1366.732@0.0.1366.732" timestamp="1584343771364" />
+    <state x="392" y="212" key="git4idea.ui.GitTagDialog/0.0.1366.732@0.0.1366.732" timestamp="1584344013476" />
   </component>
 </project>

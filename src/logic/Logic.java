@@ -1,6 +1,6 @@
-package com.ritam.src.logic;
+package src.logic;
 
-import com.ritam.src.data.Table;
+import src.data.Table;
 
 public class Logic {
     public static boolean winningLogic(char w) {

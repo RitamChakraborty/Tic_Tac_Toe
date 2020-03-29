@@ -1,8 +1,8 @@
-package com.ritam.src;
+package src;
 
-import com.ritam.src.data.Table;
-import com.ritam.src.two_players.TwoPlayers;
-import com.ritam.src.vs_com.VsCom;
+import src.data.Table;
+import src.two_players.TwoPlayers;
+import src.vs_com.VsCom;
 
 import java.util.Scanner;
 

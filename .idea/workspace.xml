@@ -6,9 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdafe239-af23-42d2-b120-9a8fde093a1e" name="Default Changelist" comment="">
+    <list default="true" id="bdafe239-af23-42d2-b120-9a8fde093a1e" name="Default Changelist" comment="Update README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/ritam/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/ritam/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/ritam/src/data/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/ritam/src/logic/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/ritam/src/two_players/TwoPlayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/two_players/TwoPlayers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/ritam/src/vs_com/VsCom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vs_com/VsCom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/data/Table.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/logic/Logic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/two_players/TwoPlayers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic_Tac_Toe/com/ritam/src/vs_com/VsCom.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Design Pattern" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -56,11 +70,11 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ritam.src.Main" />
+      <option name="MAIN_CLASS_NAME" value="src.Main" />
       <module name="Tic_Tac_Toe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ritam.src.*" />
+          <option name="PATTERN" value="src.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,7 +115,10 @@
       <workItem from="1561128521602" duration="16000" />
       <workItem from="1561136908308" duration="2707000" />
       <workItem from="1561183878671" duration="18000" />
-      <workItem from="1584342948799" duration="1290000" />
+      <workItem from="1584342948799" duration="1377000" />
+      <workItem from="1584461037652" duration="608000" />
+      <workItem from="1584597862511" duration="2616000" />
+      <workItem from="1585497985344" duration="531000" />
     </task>
     <task id="LOCAL-00001" summary="Added handler for wrong inputs">
       <created>1560966773728</created>
@@ -138,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584343998615</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update README.md">
+      <created>1584344276640</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584344276640</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +176,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -175,34 +201,42 @@
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="420" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.732@0.0.1366.732" timestamp="1584343683270" />
-    <state x="212" y="0" key="CommitChangelistDialog2" timestamp="1584343996553">
+    <state x="212" y="0" key="CommitChangelistDialog2" timestamp="1585498586935">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="212" y="0" key="CommitChangelistDialog2/0.0.1366.732@0.0.1366.732" timestamp="1584343996553" />
-    <state width="1324" height="451" key="GridCell.Tab.0.bottom" timestamp="1584343484678">
+    <state x="212" y="0" key="CommitChangelistDialog2/0.0.1366.732@0.0.1366.732" timestamp="1585498586935" />
+    <state x="470" y="118" key="FileChooserDialogImpl" timestamp="1584600986776">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1324" height="451" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1584343484678" />
-    <state width="1324" height="451" key="GridCell.Tab.0.center" timestamp="1584343484677">
+    <state x="470" y="118" key="FileChooserDialogImpl/0.0.1366.732@0.0.1366.732" timestamp="1584600986776" />
+    <state width="1324" height="545" key="GridCell.Tab.0.bottom" timestamp="1585498498505">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1324" height="451" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1584343484677" />
-    <state width="1324" height="451" key="GridCell.Tab.0.left" timestamp="1584343484677">
+    <state width="1324" height="545" key="GridCell.Tab.0.bottom/0.0.1366.732@0.0.1366.732" timestamp="1585498498505" />
+    <state width="1324" height="545" key="GridCell.Tab.0.center" timestamp="1585498498503">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1324" height="451" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1584343484677" />
-    <state width="1324" height="451" key="GridCell.Tab.0.right" timestamp="1584343484678">
+    <state width="1324" height="545" key="GridCell.Tab.0.center/0.0.1366.732@0.0.1366.732" timestamp="1585498498503" />
+    <state width="1324" height="545" key="GridCell.Tab.0.left" timestamp="1585498498502">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state width="1324" height="451" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1584343484678" />
+    <state width="1324" height="545" key="GridCell.Tab.0.left/0.0.1366.732@0.0.1366.732" timestamp="1585498498502" />
+    <state width="1324" height="545" key="GridCell.Tab.0.right" timestamp="1585498498504">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state width="1324" height="545" key="GridCell.Tab.0.right/0.0.1366.732@0.0.1366.732" timestamp="1585498498504" />
     <state x="170" y="0" key="SettingsEditor" timestamp="1584343947133">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
     <state x="170" y="0" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1584343947133" />
-    <state x="282" y="96" key="Vcs.Push.Dialog.v2" timestamp="1584344085562">
+    <state x="282" y="96" key="Vcs.Push.Dialog.v2" timestamp="1584344278580">
       <screen x="0" y="0" width="1366" height="732" />
     </state>
-    <state x="282" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.732@0.0.1366.732" timestamp="1584344085562" />
+    <state x="282" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.732@0.0.1366.732" timestamp="1584344278580" />
+    <state x="362" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1584597936893">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="362" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.732@0.0.1366.732" timestamp="1584597936893" />
     <state x="381" y="154" key="git4idea.merge.GitMergeDialog" timestamp="1584343747836">
       <screen x="0" y="0" width="1366" height="732" />
     </state>

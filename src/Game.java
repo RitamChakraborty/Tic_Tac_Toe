@@ -1,4 +1,4 @@
-package com.ritam.src;
+package src;
 
 public abstract class Game {
     public abstract void startGame(char w1, char w2);

@@ -1,8 +1,8 @@
-package com.ritam.src.vs_com;
+package src.vs_com;
 
-import com.ritam.src.Game;
-import com.ritam.src.data.Table;
-import com.ritam.src.logic.Logic;
+import src.Game;
+import src.data.Table;
+import src.logic.Logic;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -29,11 +29,14 @@ public class VsCom extends Game {
             System.out.println("\t2. Computer");
             System.out.println("Enter you choice: ");
             choice = scanner.next();
-
+    
             if (choice.equals("2")) {
                 validInput = true;
                 comFirst = true;
-            } else if (!choice.equals("1")) {
+            } else if (choice.equals("1")) {
+                validInput = true;
+                comFirst = false;
+            } else {
                 System.out.println("UNKNOWN INPUT!");
             }
         }
